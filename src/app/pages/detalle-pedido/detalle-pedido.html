@@ -1,0 +1,17 @@
+<div id="detallePedido">
+    <div class="titulo">
+        <h1>Detalle de pedido</h1>
+    </div>
+    <div class="detalle">
+        @if(pedido(); as p){
+            <div>
+                <p><b>Cliente =</b> {{p.cliente}}</p>
+                <p><b>Plato =</b> {{p.plato}}</p>
+                <p><b>Cantidad =</b> {{p.cantidad}}</p>
+                <p><b>Precio Unitario =</b> {{p.precioUnitario}}</p>
+                <p><b>Estado = </b>{{p.estado}}</p>
+                <p><b>TOTAL =</b> {{calcularTotal(p.precioUnitario,p.cantidad)}}</p>
+            </div>
+        }
+    </div>
+</div>

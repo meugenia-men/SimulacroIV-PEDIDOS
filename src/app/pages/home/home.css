@@ -1,0 +1,19 @@
+#miHome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: brown;
+}
+
+.titulo{
+    margin: 30px;
+}
+
+#miListado{
+    margin: 30px;
+}
+
+li{
+    margin: 10px;
+}

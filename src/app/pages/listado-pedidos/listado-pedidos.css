@@ -1,0 +1,44 @@
+#miListado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    margin: 30px;
+    color: brown;
+}
+
+.listaPedidos{
+    border: 2px solid brown;
+    border-radius: 20px;
+    padding: 30px;
+    width: 40%;
+}
+
+.ulPedidos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px; 
+    padding: 0;
+    color: brown;
+}
+
+.ulPedidos li {
+    display: flex;
+    flex-direction: row;     
+    align-items: center;     
+    gap: 15px;               /* Espacio de separación entre la descripción y los botones */
+    padding-bottom: 10px;
+    border-bottom: 1px dashed black; /* Línea divisoria opcional entre productos */
+}
+
+button{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 20px;
+
+}

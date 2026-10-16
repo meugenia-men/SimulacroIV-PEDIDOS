@@ -1,0 +1,10 @@
+#miFooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: rgb(245, 186, 114);
+    color: brown;
+    width: 60%;
+    margin: auto;
+}

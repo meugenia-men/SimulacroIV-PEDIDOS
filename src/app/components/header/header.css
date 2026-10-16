@@ -1,0 +1,15 @@
+#miNav{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    background-color: rgb(245, 186, 114);
+    padding: 50px;
+    width: 60%;
+    margin: auto;
+}
+
+a{
+    margin: 15px;
+    text-decoration: none;
+    color: brown;
+}

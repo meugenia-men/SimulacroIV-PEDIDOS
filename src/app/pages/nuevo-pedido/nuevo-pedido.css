@@ -1,0 +1,41 @@
+#miFormulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: brown;
+}
+
+.titulo{
+    margin:30px;
+    color: brown;
+}
+
+.formulario-pedido{
+    border: 2px solid brown;
+    padding: 30px;
+    border-radius: 20px;
+    width: 30%;
+    
+}
+
+input, select, option{
+    width: 100%;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+fieldset{
+    border: none;
+}
+
+button{
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+span{
+    color: blue;
+}

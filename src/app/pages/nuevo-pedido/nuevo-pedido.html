@@ -1,0 +1,69 @@
+<div id="miFormulario">
+    <div class="titulo">
+        <h1>AGREGAR NUEVO PEDIDO</h1>
+    </div>
+    <div class="formulario-pedido">
+        <form [formGroup]="formulario" (ngSubmit) = "onSubmit()">
+            <fieldset>
+                <label for="cliente">Cliente*</label>
+                <input type="text" formControlName = "cliente">
+                @if(formulario.get("cliente")?.hasError('required') && formulario.get("cliente")?.touched){
+                    <span>El campo es obligatorio!</span>
+                }@else if (formulario.get("cliente")?.hasError('minLength') && formulario.get("cliente")?.touched) {
+                    <span>Debe contener al menos 3 caracteres!</span>
+                }
+            </fieldset>
+
+            <fieldset>
+                <label for="plato">Plato*</label>
+                <input type="text" formControlName ="plato">
+                @if(formulario.get("plato")?.hasError('required') && formulario.get("plato")?.touched){
+                    <span>El campo es obligatorio!</span>
+                }@else if (formulario.get("plato")?.hasError('minlength') && formulario.get("plato")?.touched) {
+                    <span>Debe contener al menos 4 caracteres!</span>
+                }@else if (formulario.get("plato")?.hasError('maxlength') && formulario.get("plato")?.touched) {
+                    <span>Puede contener hasta 20 carateres!</span>
+                }
+            </fieldset>
+
+            <fieldset>
+                <label for="cantidad">Cantidad*</label>
+                <input type="number" formControlName="cantidad">
+                @if(formulario.get("cantidad")?.hasError('required') && formulario.get("cantidad")?.touched){
+                    <span>El campo es obligatorio!</span>
+                }@else if (formulario.get("cantidad")?.hasError('pattern') && formulario.get("cantidad")?.touched) {
+                    <span>El campo admite solo números!</span>
+                }@else if (formulario.get("cantidad")?.hasError('min') && formulario.get("cantidad")?.touched) {
+                    <span>El precio debe ser mayor a cero!</span>
+                }
+            </fieldset>
+
+            <fieldset>
+                <label for="precioUnitario">Precio*</label>
+                <input type="number" formControlName="precioUnitario">
+                @if(formulario.get("precioUnitario")?.hasError('required') && formulario.get("precioUnitario")?.touched){
+                    <span>El campo es obligatorio!</span>
+                }@else if (formulario.get("precioUnitario")?.hasError('pattern') && formulario.get("precioUnitario")?.touched) {
+                    <span>El campo admite solo números!</span>
+                }@else if (formulario.get("precioUnitario")?.hasError('min') && formulario.get("precioUnitario")?.touched) {
+                    <span>El precio debe ser mayor a cero!</span>
+                }
+            </fieldset>
+
+            <fieldset>
+                <label for="estado">Estado*</label>
+                <select name="estado" formControlName="estado">
+                    <option value="" disabled selected>Elija un estado</option>
+                    <option value="pendiente">Pendiente</option>
+                    <option value="entrefado">Entregado</option>
+                    <option value="cancelado">Cancelado</option>
+                </select>
+                @if(formulario.get("estado")?.hasError('required') && formulario.get("estado")?.touched){
+                    <span>El campo es obligatorio!</span>
+                }
+            </fieldset>
+            <button type="button" (click)="onSubmit()">Agregar</button>
+        </form>
+    </div>
+
+</div>

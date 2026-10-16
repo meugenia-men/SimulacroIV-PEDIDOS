@@ -1,0 +1,19 @@
+#detallePedido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: brown;
+}
+
+.titulo{
+    margin: 30px;
+}
+
+.detalle{
+    border: 2px solid brown;
+    border-radius: 20px;
+    padding: 30px;
+    width: 30%;
+    font-size: x-large;
+}

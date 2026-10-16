@@ -1,0 +1,24 @@
+<div id="miListado">
+    <div class="titulo">
+        <h1>Listado de pedidos</h1>
+    </div>
+    <div class="listaPedidos">
+        <ul class="ulPedidos">
+            @for(p of pedidos(); track p.id){
+                <div>
+                    <li><b>{{p.cliente}} </b>- {{p.estado}}</li>
+                </div>
+                <div class="botones">
+                    <button [routerLink] ="['/detallePedido', p.id]">Detalle</button>
+                    <button (click)="deletePedido(p.id)">Eliminar</button>
+                </div>
+            }@empty{
+                <div>
+                    <p>No disponible el detalle de pedido</p>
+                </div>    
+            }
+        </ul>
+        
+    </div>
+
+</div>
